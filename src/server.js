@@ -1,14 +1,15 @@
-const path = require("path");
-const dotenv = require("../resetful/node_modules/dotenv");
+import dotenv from "dotenv";
+import express from "express";
+//import db from "./db";
+dotenv.config();
 
-//require("")
-dotenv.config({path:path.resolve(__dirname, "../.env")});
 
-//require("dotenv").config();
+const app = express();
 
-const app = require ('./toDoList');
+app.get('/',(req, res) => res.send('Home!'));
+
 const port = process.env.PORT || 3000;
-const server = app.listen(port, function(){
-    console.log('Express server listening on port' + port);
-});
+app.listen(port, () => {
+    console.log(`Server is running on: http://localhost:${port}`)
+  });
 
