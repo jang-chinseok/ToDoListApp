@@ -1,7 +1,3 @@
-const express = require('../resetful/node_modules/express');
-const app = express();
-const db = require('../toDoDB/db');
-module.exports = app;
 
 //일단 사용자가 등록되는 동시에 해당 사용자가 있는지 없는지를 체크
 /*
@@ -59,5 +55,6 @@ function cilckHendler(event){
    //아이콘을 클릭 했을 경우 아이콘의 형성과  각각의 아이콘을 클릭 했을 때의 핸들링 
    //if문 활용. 
 }
-   export default toDo;
+
+export default toDo;
 */
