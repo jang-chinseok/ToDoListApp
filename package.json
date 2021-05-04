@@ -20,5 +20,13 @@
     "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.13.15",
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jang-chinseok/ToDoListApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jang-chinseok/ToDoListApp/issues"
+  },
+  "homepage": "https://github.com/jang-chinseok/ToDoListApp#readme"
 }

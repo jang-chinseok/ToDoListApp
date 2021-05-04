@@ -1,27 +1,6 @@
 
-//일단 사용자가 등록되는 동시에 해당 사용자가 있는지 없는지를 체크
-/*
-const Youser = document.querySelector("#user");
-const title = document.querySelector("#title");
-
-const list =[];
-
-function chackYouserDB(name){
-    if(fakeDB.hasOneProperty(name)==false){
-
-    }
-//만약 YouserName이 없을시 db에 등록.
-    else{
-
-        //있는 경우 해당 키의 value불러오기.(리스트)
-    }
-    //inerhtml의 youser를 name으로 변경.
-    //title을 wellcome ${name} 으로 변경
-    
-}
-
 function addDB(texts){
-    list.append(texts);
+
     //db의 currentYouser 키에 해당하는 value에 삽입.
 }
 function moveDB(){
@@ -55,6 +34,3 @@ function cilckHendler(event){
    //아이콘을 클릭 했을 경우 아이콘의 형성과  각각의 아이콘을 클릭 했을 때의 핸들링 
    //if문 활용. 
 }
-
-export default toDo;
-*/

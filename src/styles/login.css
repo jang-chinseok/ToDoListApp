@@ -1,0 +1,36 @@
+.header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 90px 0;
+  }
+  
+  .header-title {
+    font-size: 40px;
+
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form input {
+    border: 1px solid gray;
+    padding: 15px 0px;
+    margin: 0 25px;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .login-form-finished{
+    display : none;
+  }
+  
+  .submitjs {
+    background-color: yellow;
+    cursor: pointer;
+    padding: 20px 0px;
+    border-radius: 5px;
+    font-size: 23px;
+  }
+  
