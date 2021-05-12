@@ -118,6 +118,7 @@ function ToDolistPainter(textS){
     
 }
 const listViewer = document.querySelector(".imFo_list");
+const listview = document.querySelector("#container");
 
 function chackYouserDB(IDc,PWc){
 
@@ -128,6 +129,7 @@ function chackYouserDB(IDc,PWc){
 
         const li = document.querySelectorAll("li");
         loginForm.className = "login-form-finished";
+        listview.classList.remove("before-login");
         //listViewer.removeChild(li);
         for(let i=1;i!=list.length;i++){
             ToDolistPainter(list[i].title);

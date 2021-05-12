@@ -1,3 +1,6 @@
+
+<!DOCTYPE html>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,33 +12,81 @@
   </head>
 
   <body>
-    <main>
-     
+    <section class="lgi-form">
+      <main>
+        <header class="header-text">
+          <h1 class="header-title">Welcome to This list Viewer!!!</h1>
+          <!--위 타이틀은 js에 의해서 변형될 것임.-->
+        </header>
 
-      <header class="header-text">
-        <h1 class="header-title">Welcome to This list Viewer!!!</h1>
-        <!--위 타이틀은 js에 의해서 변형될 것임.-->
-      </header>
+        <form class="login-form" id="login-formID">
+          <div class="int-area">
+            <input
+              class="user"
+              type="text"
+              name="username"
+              id="id"
+              autocomplete="off"
+              required
+            />
+            <label for="id">USER NAME</label>
+          </div>
+          <div class="int-area">
+            <input
+              class="passWord"
+              type="password"
+              name="password"
+              id="pw"
+              autocomplete="off"
+              required
+            />
+            <label for="pw">PASSWORD</label>
+          </div>
 
-      <form class="login-form" id ="login-formID">
-        <input class ="user" name="username" type="text" placeholder=" ID" />
-        <input class ="passWord" name="password" type="password" placeholder=" PW" />
-        <button class ="submitjs" type = "submit" placeholder="Log in" >Log in</button>
-      </form> 
-      <!--위 input값이 db에서 가져올 value에 대한 key값-->
+          <div class="btn-area">
+            <button class="submitjs" type="submit">Log in</button>
+          </div>
+        </form>
 
-      <div class="listContaner" style="overflow:scroll">
-        <ul class = "imFo_list" ></ul>
-        <!--to do list를 제어할 컨테이너. 이 아래에 리스트 형식으로 
-          만들어서 display할 예정.-->
-      </div>
-      <div class="calendar">
-        <!-- 캘린더를 보여줄 div 로그인 이후에 이 div를 캘린더에 대한 컨테이너로 한다.-->
-      </div>
-    </main>
+        <div class="caption">
+          <a href="">Forgot Password?</a>
+        </div>
+        <!--위 input값이 db에서 가져올 value에 대한 key값-->
+
+        <section class="before-login" id="container">
+          <div class="listContaner" style="overflow: scroll">
+            <ul class="imFo_list"></ul>
+            <!--to do list를 제어할 컨테이너. 이 아래에 리스트 형식으로 
+              만들어서 display할 예정.-->
+          </div>
+          <div class="calendar">
+            <!-- 캘린더를 보여줄 div 로그인 이후에 이 div를 캘린더에 대한 컨테이너로 한다.-->
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <!-- <script>
+      let id = $("#id");
+      let pw = $("#pw");
+      let btn = $("#btn");
+
+      $(btn).on("click", function () {
+        if ($(id).val() == "") {
+          $(id).next("label").addClass("warning");
+          setTimeout(function () {
+            $("label").removeClass("warning");
+          }, 1500);
+        } else if ($(pw).val() == "") {
+          $(pw).next("label").addClass("warning");
+          setTimeout(function () {
+            $("label").removeClass("warning");
+          }, 1500);
+        }
+      });
+    </script> -->
   </body>
 
-  <script src="./src/LoginJS.js" ></script>
+  <script src="./src/LoginJS.js"></script>
   <script src="./src/toDoList.js"></script>
-  
 </html>
