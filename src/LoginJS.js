@@ -162,7 +162,7 @@ function paintToDo(text){
     li.appendChild(span);
     li.appendChild(delBtn);
     li.id = newId;
-    li.className = indexList;
+    li.className = "indexList";
     listViewer.appendChild(li);
     listcontanerNum.push(text);
 }
