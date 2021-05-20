@@ -154,21 +154,17 @@ function paintToDo(text){
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
-    const newId = list.length +1;
-    delBtn.innerText = "❌";
+    let listcontanerNum =[];
+    const newId = listcontanerNum.length +1;
+    delBtn.innerText = "···";
     //delBtn.addEventListener("click",dleToDo);
     span.innerText = text;
     li.appendChild(span);
     li.appendChild(delBtn);
     li.id = newId;
+    li.className = "indexList";
     listViewer.appendChild(li);
-   /* const pendingOBJ ={
-        text: text, id: newId
-    }
-    toDos.push(pendingOBJ);
-    savelist();*/
-
-
+    listcontanerNum.push(text);
 }
 
 function init(){
