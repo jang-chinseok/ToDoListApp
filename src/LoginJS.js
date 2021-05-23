@@ -152,19 +152,28 @@ function chackYouserDB(IDc,PWc){
 function paintToDo(text){
     console.log("paint text");
     const li = document.createElement("li");
-    const delBtn = document.createElement("button");
+    const moreMenuBtn = document.createElement("button");
     const span = document.createElement("span");
-    let listcontanerNum =[];
-    const newId = listcontanerNum.length +1;
-    delBtn.innerText = "···";
-    //delBtn.addEventListener("click",dleToDo);
+    const editBtn = document.createElement("button");
+    const delBtn = document.createElement("button");
+    const detailBtn = document.createElement("button");
+    let listContanerNum =[];
+    const newId = listContanerNum.length +1;
+    moreMenuBtn.innerText = "···";
+    //moreMenuBtn.addEventListener("click",moreMenu); -> moreMenu가 활성화 되어있는 동안에만,하위 버튼들의 eventLidtener를 활성화 시킬 것.
+    //editBtn,delBtn,detailBtn 에 대한 이모지 추가.
     span.innerText = text;
     li.appendChild(span);
-    li.appendChild(delBtn);
-    li.id = newId;
+    li.appendChild(moreMenuBtn);
+    moreMenuBtn.appendChild(editBtn,delBtn,detailBtn);// 세개의 버튼은, moreMenu에 귀속되어 있을 것, 기본적인 디스플레이 타입은 NAN
+    li.id = newId;                                            //dnldml 
     li.className = "indexList";
     listViewer.appendChild(li);
-    listcontanerNum.push(text);
+    listContanerNum.push(text);
+}
+let menustatus = false;
+function moreMenu(){
+
 }
 
 function init(){
