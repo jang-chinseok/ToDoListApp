@@ -45,7 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("images/bg3.jpg") no-repeat center;
+  background: url("https://images.unsplash.com/photo-1529963183134-61a90db47eaf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YXVyb3JhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60") no-repeat center;
   background-size: cover;
 }
 

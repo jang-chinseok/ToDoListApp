@@ -147,7 +147,7 @@ function chackYouserDB(IDc,PWc){
 }
 
 
-
+let listContanerNum =[];
 //일단 사용자가 등록되는 동시에 해당 사용자가 있는지 없는지를 체크
 function paintToDo(text){
     console.log("paint text");
@@ -157,7 +157,8 @@ function paintToDo(text){
     const editBtn = document.createElement("button");
     const delBtn = document.createElement("button");
     const detailBtn = document.createElement("button");
-    let listContanerNum =[];
+    const menuContaner = document.createElement("div");
+    
     const newId = listContanerNum.length +1;
     moreMenuBtn.innerText = "···";
     //moreMenuBtn.addEventListener("click",moreMenu); -> moreMenu가 활성화 되어있는 동안에만,하위 버튼들의 eventLidtener를 활성화 시킬 것.
@@ -165,8 +166,9 @@ function paintToDo(text){
     span.innerText = text;
     li.appendChild(span);
     li.appendChild(moreMenuBtn);
-    moreMenuBtn.appendChild(editBtn,delBtn,detailBtn);// 세개의 버튼은, moreMenu에 귀속되어 있을 것, 기본적인 디스플레이 타입은 NAN
-    li.id = newId;                                            //dnldml 
+    menuContaner.appendChild(editBtn,delBtn,detailBtn);// 세개의 버튼은, MenuContaner에 귀속되어 있을 것, 기본적인 디스플레이 타입은 NAN
+    moreMenuBtn.appendChild(menuContaner); //menueContaner 를 moreMenuBtn에 귀속, 클릭시의 생성-삭제를 이 div태그를 활용해 할것. class기준
+    li.id = newId;                                     
     li.className = "indexList";
     listViewer.appendChild(li);
     listContanerNum.push(text);
